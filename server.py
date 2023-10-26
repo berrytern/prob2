@@ -54,14 +54,32 @@ print(f"""
 Com um nível descritivo de α∗ = {ncdf}, temos que, não há evidências o suficiente para sugerir que o efeito do uso dos sensores
 na diminuição do tempo para um nível de significância a um nível de 5%.
 """)
-"""
+print("""
 Questão 3:
 Você quer comprar um forno de micro-ondas e escolherá o Modelo A se os custos de
 reparo forem mais baixos que os custos de reparo do Modelo B. Você pesquisa os
 custos de reparo de 47 fornos do Modelo A e 55 fornos do Modelo B. O custo médio
 do reparo do modelo A é $ 75 e, do modelo B, $ 80. Ao nível de 1%, você compraria o
 Modelo A? Considere que o desvio padrão populacional para o modelo A é $ 12,50 e
-para o modelo B é $ 20."""
+para o modelo B é $ 20.""")
+n1 = 47
+n2 = 55
+X1 = 75
+X2 = 80
+d1 = 12.5
+d2 = 20
+a=0.01
+Za = st.norm.ppf(0.01)
+
+Z = ((X1 - X2) -0)/math.sqrt((d1**2/n1)+(d2**2/n2))
+print(f"Z = {Z}")
+print(f"RC = Z < {Za}")
+if Z < Za:
+    print("Hipotese nula Rejeitada")
+else:
+    print("""Hipotese nula Aceita.
+Há evidências de que o modelo A é mais vantajoso do que o modelo B
+""")
 
 """
 Questão 4:
