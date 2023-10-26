@@ -86,6 +86,20 @@ Questão 4:
 Uma amostra com 10 observações de uma variável aleatória Normal forneceu média
 de 5,5 e variância amostral 4. Deseja-se testar, ao nível de significância de 5%, se a
 média na população é igual ou é menor que 6. Qual é a conclusão?"""
+n = 10
+u = 6
+X = 5.5
+v = 4
+a = 0.05
+gl=n-1
+print("""
+Hipótese Nula (H0): A média na população é igual ou maior que 6 (μ ≥ 6).
+Hipótese Alternativa (H1): A média na população é menor que 6 (μ < 6).
+""")
+t = (X-u)/(math.sqrt(v)/math.sqrt(n))
+vc = st.t.ppf(a,gl)
+print(f"tobs = {t}, valor calculado = {vc}, g.l = {gl}")
+print(f"como {t} é maior do que {vc}, logo, com um nível de significância de 5%, não há evidências estatísticas para afirmar que a média na população é menor que 6")
 
 """
 Questão 5:
