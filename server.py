@@ -13,7 +13,7 @@ n = 100
 po = 8/n
 a = 0.08
 Z = (po-p)/(math.sqrt((p*(1-p))/n))
-print(f"Z = {Z}")
+print(f"Zobs = {Z}")
 print(f"RC = Z < {st.norm.ppf(a)}")
 if (Z < st.norm.ppf(a)):
     print("Hipotese nula Rejeitada")
@@ -72,7 +72,7 @@ a=0.01
 Za = st.norm.ppf(0.01)
 
 Z = ((X1 - X2) -0)/math.sqrt((d1**2/n1)+(d2**2/n2))
-print(f"Z = {Z}")
+print(f"Zobs = {Z}")
 print(f"RC = Z < {Za}")
 if Z < Za:
     print("Hipotese nula Rejeitada")
@@ -107,3 +107,19 @@ Em uma pesquisa sobre possuidores de videocassete, encontram-se 120 das 200
 casas pesquisadas do bairro X e 240 das 500 residências do bairro Y. Há diferença
 significativa entre a proporção de possuidores de vídeo nos dois bairros a um nível de
 10%?"""
+
+na=200
+pa = 120/na
+pp = 240/500
+
+a=0.1
+Za = st.norm.ppf(a)
+z = (pa - pp)/math.sqrt((pp*(1-pp))/na)
+print(f"Proporção da amostra e da população - ({pa}, {pp})")
+print(f"Zobs = {Z}")
+print(f"RC = Z < {Za}")
+if (Z < Za):
+    print("""Hipotese nula Rejeitada\n\tAdotando um nível de signicância de 10% concluímos a partir da
+amostra que a proporção de possuidores de vídeo nos dois bairros são semelhantes.""")
+else:
+    print("""Hipotese nula aceita.""")
