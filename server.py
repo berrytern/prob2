@@ -22,7 +22,7 @@ else:
 amostra que a proporção do rebanho com verminose tem indícios de diminuição com
 a nova dieta.""")
 
-"""
+print("""
 Questão 2:
 Sabe-se que o tempo necessário para percorrer uma determinada rota no final da tarde
 pode ser estudado por um modelo Normal com desvio padrão de 17 min. Foram
@@ -36,7 +36,7 @@ no percurso anotado. Em seguida, os sensores foram ativados e outros 13 veículo
 os seguintes:
 
 Indique se o uso dos sensores contribui para diminuir o tempo médio de percurso
-utilizando o nível de 5%."""
+utilizando o nível de 5%.""")
 
 d = 17 # min
 n1 = 11
@@ -81,11 +81,11 @@ else:
 Há evidências de que o modelo A é mais vantajoso do que o modelo B
 """)
 
-"""
+print("""
 Questão 4:
 Uma amostra com 10 observações de uma variável aleatória Normal forneceu média
 de 5,5 e variância amostral 4. Deseja-se testar, ao nível de significância de 5%, se a
-média na população é igual ou é menor que 6. Qual é a conclusão?"""
+média na população é igual ou é menor que 6. Qual é a conclusão?""")
 n = 10
 u = 6
 X = 5.5
@@ -101,12 +101,12 @@ vc = st.t.ppf(a,gl)
 print(f"tobs = {t}, valor calculado = {vc}, g.l = {gl}")
 print(f"como {t} é maior do que {vc}, logo, com um nível de significância de 5%, não há evidências estatísticas para afirmar que a média na população é menor que 6")
 
-"""
+print("""
 Questão 5:
 Em uma pesquisa sobre possuidores de videocassete, encontram-se 120 das 200
 casas pesquisadas do bairro X e 240 das 500 residências do bairro Y. Há diferença
 significativa entre a proporção de possuidores de vídeo nos dois bairros a um nível de
-10%?"""
+10%?""")
 
 na=200
 pa = 120/na
